@@ -18,12 +18,12 @@ Database is in MongoDB
 
 # Installation : 
 
-Commands Need to be executed before running the code are in required.txt and should be executed inside FrontEnd Folder.
+- Commands Need to be executed before running the code are in required.txt and should be executed inside FrontEnd Folder.
 
-For backend just go to the Backend folder and in cmd type `npm install`
+- For backend just go to the Backend folder and in cmd type `npm install`
 
-Please change the MongoDB URI(in server.js inside Backend) and the api key of google map(in frontend appmodule.ts and appcomponent.html)
+- Please change the MongoDB URI(in server.js inside Backend) and the api key of google map(in frontend appmodule.ts and appcomponent.html)
 
-Please make required changes in MongoDB database as given in screenshot.
+- Please make required changes in MongoDB database as given in screenshot.
 
 
