@@ -1,0 +1,4 @@
+npm install socket.io-client --save
+npm i @types/socket.io-client --save-dev
+sudo npm install --save @types/googlemaps
+sudo npm install @agm/core
