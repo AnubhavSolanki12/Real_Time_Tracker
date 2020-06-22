@@ -10,8 +10,9 @@ var count=0;
 var DatabaseName = 'DetailsForLiveTracker';
 var collectionName = 'DriverDetails';
 
+//TO CONNECT TO THE DATABASE
 (async function main(){
-    const uri = 'YOUR MONGO URI';
+    const uri = 'YOUR MONGO URI';                           ////ENTER MONGO URI
     const client = new MongoClient(uri,{
         useUnifiedTopology: true
     });
@@ -21,7 +22,7 @@ var collectionName = 'DriverDetails';
             if(err) throw err;
             console.log('Database Loaded');
             database = db;
-            //addData(db,'anubhav','mike');
+            //addData(db,'clientname','drivername');    //Enter client name and driver name to add data
         });
     } catch (e) {
         console.error(e);
@@ -30,6 +31,7 @@ var collectionName = 'DriverDetails';
     }
 })();
 
+//to add data in mongo
 function addData(db,clientName,driverName){
     var dbo = db.db(DatabaseName);
     var myobj = {
@@ -48,7 +50,7 @@ function addData(db,clientName,driverName){
         db.close();
     });
 }
-
+//function to update data through query and newvalue in mongo
 function updateData(myquery,newvalues){
     var dbo = database.db(DatabaseName);
     dbo.collection(collectionName).updateOne(myquery, newvalues, function(err, res) {
@@ -56,6 +58,7 @@ function updateData(myquery,newvalues){
     });
 }
 
+//update location after driver send location
 async function updateLocation(driver,clientName){
     var dbo = database.db(DatabaseName);
     await dbo.collection(collectionName).find({ }).forEach((data)=> { 
@@ -72,6 +75,7 @@ async function updateLocation(driver,clientName){
     }); 
 }
 
+//getlocation from database
 async function getLocation(clientName,driver){
     var dbo = database.db(DatabaseName);
     if(driver.location!=null)
@@ -104,6 +108,7 @@ app.get('/', function (req, res) {
     });
 });
 
+//SOCKET
 io.on('connection', function (socket) {
     console.log('No. of sockets ' + ++count);
     socket.on('disconnect', function() {
@@ -111,7 +116,8 @@ io.on('connection', function (socket) {
       console.log('One person disconnected!');
       console.log('Now, no. of sockets : ' + count);
    });
-
+    
+   //GETTING DATA FROM THE CLIENTSIDE FRONTEND 
    socket.on("postClientName",(clientName)=>{
         var driver = {
             location : {
@@ -126,6 +132,7 @@ io.on('connection', function (socket) {
         })
    })
 
+   //GETTING DATA FROM DRIVER SIDE FRONTEND
    socket.on('lastKnownLocation',function (data) {
         var client = {
             name : 'xyz'
