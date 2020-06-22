@@ -6,7 +6,7 @@ Backend is created in Nodejs.
 Database is in MongoDB
 
 
-Technology Used : 
+# Technology Used : 
 Sockets
 Angular9(Client Side Frontend)
 Nodejs(Backend)
@@ -16,11 +16,11 @@ BootStrap(Styling)
 Express
 
 
-Installation : 
+# Installation : 
 
 Commands Need to be executed before running the code are in required.txt and should be executed inside FrontEnd Folder.
 
-For backend just go to the Backend folder and in cmd type "npm install"
+For backend just go to the Backend folder and in cmd type `npm install`
 
 Please change the MongoDB URI(in server.js inside Backend) and the api key of google map(in frontend appmodule.ts and appcomponent.html)
 
