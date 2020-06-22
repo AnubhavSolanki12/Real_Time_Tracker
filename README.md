@@ -7,13 +7,13 @@ Database is in MongoDB
 
 
 # Technology Used : 
-Sockets
-Angular9(Client Side Frontend)
-Nodejs(Backend)
-MongoDB(Database)
-JavaScript(Driver Side Frontend)
-BootStrap(Styling)
-Express
+- Sockets
+- Angular9(Client Side Frontend)
+- Nodejs(Backend)
+- MongoDB(Database)
+- JavaScript(Driver Side Frontend)
+- BootStrap(Styling)
+- Express
 
 
 # Installation : 
