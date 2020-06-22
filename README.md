@@ -7,7 +7,7 @@ In this application their are two frontend one is created in angular and other i
 - Nodejs(Backend)
 - MongoDB(Database)
 - JavaScript(Driver Side Frontend)
-- BootStrap(Styling)
+- BootStrap(Style)
 - Express
 
 
