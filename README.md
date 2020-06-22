@@ -1,10 +1,5 @@
 # Real_Time_Tracker
-It is a real time tracker. 
-Their are two frontend one is client side and the other is driver side.
-Front end in client side is created in angular and the frontend of driver is made in javascript.
-Backend is created in Nodejs.
-Database is in MongoDB
-
+In this application their are two frontend one is created in angular and other is in javascript.The one which is in angular is controlled by client and other one is controlled by respective driver, the database which is used in this program is MongoDB and the backend is programmed in NodeJs.
 
 # Technology Used : 
 - Sockets
